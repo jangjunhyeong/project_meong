@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>버들</title>
+	<link rel="stylesheet" href="./css/style5.css">
+</head>
+<body>
+	<div id="root">
+		<div id="con">
+			<div class="thumb">
+				<section>
+					<img src="./img/fireworks.svg" width="100%" height="100%">
+				</section>
+				<section>
+					<img src="./img/egg.svg" width="100%" height="100%">
+				</section>
+				<section>
+					<img src="./img/fish.svg" width="100%" height="100%">
+				</section>
+				<section>
+					<img src="./img/rain.svg" width="100%" height="100%">
+				</section>
+				<section>
+					<img src="./img/tang.svg" width="100%" height="100%">
+				</section>
+			</div>
+		</div>
+		<button>Click</button>
+	</div>
+
+
+<!-- 썸네일 flex-direction:column 방식의 레이아웃  -->
+<!-- 테트리스랑 비슷한 거 같기도  -->
+
+
+
+	<script>
+		const root = document.getElementById("root")
+		console.log(root);
+		const target = document.getElementsByClassName('thumb');
+		const Btn = document.querySelector('#root>button');
+		target[0].style.width='70vw';
+		target[0].style.height='70vh';
+		target[0].style.display='flex';
+		target[0].style.marginLeft='1vw';
+		target[0].children[0].style.width='70vw';
+		target[0].children[0].style.height='70vh';
+		target[0].children[0].style.display='flex';
+		target[0].children[0].style.marginLeft='1vw';
+
+		for(let i=1; i<target[0].children.length; i++){
+			target[0].children[i].style.width='10vh'
+			target[0].children[i].style.height='10vh'
+		}
+		// console.log(target[0].children[1].style.width);
+		// console.log(target[0].children[1].style.height);
+
+// console.log(target[0].children.length);
+//  값 : 5
+		
+		// let index=0;
+		Btn.addEventListener("click",function(){
+			// index++;
+			console.log("test");
+			target[0].children[0]=target[0].children[4];
+			target[0].children[1]=target[0].children[0];
+			// console.log(index);
+		})
+ // 일단 children[0]과 children[4]를 바꿔보는 시도를 해보았지만 잘 안된다.
+		
+	</script>
+</body>
+</html>
