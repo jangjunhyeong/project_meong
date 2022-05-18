@@ -1,0 +1,39 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+#root{
+	width: 100vw;
+	max-width: 100%;
+	height: 100vh;
+	max-height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+#con{
+	width: 90vw;
+	height: 70vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 10vh;
+	position: absolute;
+
+
+
+	.thumb{
+		width: 10vh;
+		height: 70vh;
+		position: relative;
+
+		&>section{
+			width: 10vh;
+			height: 10vh;
+			position: absolute;
+			// section 가로
+			// height:inherit/section.length;
+		}
+	}
+	
+}
