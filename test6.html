@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>버들</title>
+	<link rel="stylesheet" href="./css/style6.css">
+</head>
+<body>
+	<div id="root">
+		<div id="con">
+			<div id="thumb">
+				<section>
+					<img src="./img/fireworks.svg" width="100%" height="100%">
+				</section>
+				<section>
+					<img src="./img/egg.svg" width="100%" height="100%">
+				</section>
+				<section>
+					<img src="./img/fish.svg" width="100%" height="100%">
+				</section>
+				<section>
+					<img src="./img/rain.svg" width="100%" height="100%">
+				</section>
+				<section>
+					<img src="./img/tang.svg" width="100%" height="100%">
+				</section>
+			</div>
+		</div>
+		<button>Click</button>
+	</div>
+
+
+<!-- 썸네일 flex-direction:column 방식의 레이아웃  -->
+
+
+
+	<script>
+		const root = document.getElementById("root")
+		console.log(root);
+		const target = document.getElementById('thumb');
+		const Btn = document.querySelector('#root>button');
+		target.style.width='70vw';
+		target.style.height='70vh';
+		target.style.display='flex';
+		target.style.marginLeft='1vw';
+		target.children[0].style.width='70vw';
+		target.children[0].style.height='70vh';
+		target.children[0].style.display='flex';
+		target.children[0].style.marginLeft='1vw';
+
+		for(let i=1; i<target.children.length; i++){
+			target.children[i].style.width='10vh'
+			target.children[i].style.height='10vh'
+		}
+		// console.log(target.children[1].style.width);
+		// console.log(target.children[1].style.height);
+
+		console.dir(target);
+		console.dir(target.children);
+// console.log(target.children.length);
+//  값 : 5
+		Array.from(target);
+		Array.from(target.children);
+		console.log(Array.from(target));
+		console.log(Array.from(target.children));
+
+		const control=target.children;
+		console.log(control);
+		console.dir(control);
+		Array.from(control);
+		// const control2 =target;
+		// 당연히 안됨
+		
+		console.log(Array.from(control));
+		const control3 = control.shift();
+		// Array (5)
+		Btn.addEventListener("click",function(){
+			// console.log('test');
+			//버튼에 문제 없음
+			control.shift();
+			console.log(control3);
+			// console.log(control.shift());
+			//타입에러 계속 뜸 → 참조나 변수 문제인듯함
+		})
+		
+		// class가 안돼서 id로 바꿨으나 실패
+		// shift 함수 자체에 문제는 없음
+		// test6.js로 실험완료
+
+		
+		/* MDN typeError
+		함수에 전달된 피연산자 또는 인수가 해당 연산자나 함수가 예상하는 타입과 호환되지 않거나, 
+		변경할 수 없는 값을 수정하려고 하거나, 
+		부적절한 방법으로 값을 사용하려고 할 때.*/
+
+		// 변경할 수 없는 값을 쓸 때 타입에러가 뜬다고 하는데
+		// const 로 배열을 설정해서 안뜨는지 해서 let으로 바꿨으나 또 타입에러 발생
+		// control에 shift 함수를 적용한 값을 불러왔지만 typeError 발생
+		</script>
+</body>
+</html>
