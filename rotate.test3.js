@@ -1,3 +1,6 @@
+document.body.style.margin='0';
+document.body.style.padding='0';
+document.body.style.boxSizing='borderBox';
 const root = document.getElementById("root");
 console.log(root);
 
@@ -20,24 +23,37 @@ console.log(rotateValue);
 // console.log(colorArray);
 console.dir(target.children[3]);
 root.style.width='100vw';
+root.style.height='100vh';
+root.style.overflow='hidden';
+// root.style.backgroundColor='red';
 root.style.maxWidth='100%';
 root.style.maxHeight='100%';
-root.style.height='100vh';
 root.style.display='flex';
 root.style.justifyContent='center';
 root.style.alignItems='center';
-target.style.width='80vw';
-target.style.height='80vh';
-target.style.marginTop='20vh';
-
+target.style.width='1000px';
+target.style.height='500px';
+// target.style.backgroundColor='blue'
 target.style.position='relative';
-target.style.marginLeft='40vw';
+target.style.display='flex';
+target.style.justifyContent='center';
+target.style.alignItems='center'
+
 
 // const xValue= ["0vw","5vw","5vw","5vw","0vw","-5vw","-5vw","-5vw"];
 // const yValue= ["5vw","0vw","-5vw","-5vw","-5vw","0vw","5vw","5vw"];
-const a = '5vw';
-const xValue= [a*2,a*3,a*3,a*3,a*2,a,a*2,a];
-const yValue= [a,a,a*2,a*3,a*2,a,a,a];
+const a1 = '100px';
+const a2 = '200px';
+const a3 = '300px';
+const a4 = '400px';
+const a5 = '500px';
+const a6 = '600px';
+const a7 = '700px';
+const a8 = '800px';
+const a9 = '900px';
+
+const xValue= ['450px','600px','650px','600px','450px','300px','250px','300px'];
+const yValue= ['0px','55px','200px','345px','410px','345px','200px','55px'];
 // offset이 4분면이 아니라 왼쪽 상단부터 시작하기 때문에 좌표를 다르게 접근했어야 했다.
 // 수를 하나의 변수로 계산한 뒤 x 좌표값의 최소 vw let =(a);
 // 														y 좌표값의 최소 vw let =(b);
@@ -46,25 +62,25 @@ const yValue= [a,a,a*2,a*3,a*2,a,a,a];
 
 //크기와 모양제어
 for(let index=0; index<colorArray.length; index++){
-	target.children[index].style.width='8vw';
-	target.children[index].style.height='5vw';
+	target.children[index].style.width='100px';
+	target.children[index].style.height='70px';
 	target.children[index].style.position='absolute';
-	target.children[index].style.marginLeft=xValue[index];
-	target.children[index].style.marginTop=yValue[index];
+	target.children[index].style.left=xValue[index];
+	target.children[index].style.top=yValue[index];
 	// console.log(target.children);
 	
-	target.children[index].style.backgroundColor=colorArray[index];
+	// target.children[index].style.backgroundColor=colorArray[index];
 	target.children[index].style.transform=`rotate(${rotateValue[index]}deg)`;
 }
 
 // position 값 제어하기
 
-for(let index2=0; index2<xValue.length; index2++){
-	console.log(index2);
-	target.children[index2].style.position='absolute';
-	target.children[index2].style.left=`${xValue[index2]}vw`;
-	target.children[index2].style.top=`${yValue[index2]}vw`;
-}
+// for(let index2=0; index2<xValue.length; index2++){
+// 	console.log(index2);
+// 	target.children[index2].style.position='absolute';
+// 	target.children[index2].style.left=`${xValue[index2]}vw`;
+// 	target.children[index2].style.top=`${yValue[index2]}vw`;
+// }
 
 
 // code review
