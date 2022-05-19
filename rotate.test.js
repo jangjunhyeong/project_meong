@@ -29,7 +29,6 @@ root.style.alignItems='center';
 target.style.width='80vw';
 target.style.height='80vh';
 target.style.marginTop='20vh';
-
 target.style.position='relative';
 target.style.marginLeft='30vw';
 

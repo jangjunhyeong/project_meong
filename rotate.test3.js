@@ -34,7 +34,8 @@ root.style.alignItems='center';
 target.style.width='1000px';
 target.style.height='500px';
 // target.style.backgroundColor='blue'
-target.style.position='relative';
+target.style.position='fixed';
+target.style.top='80vh';
 target.style.display='flex';
 target.style.justifyContent='center';
 target.style.alignItems='center'
@@ -53,7 +54,7 @@ const a8 = '800px';
 const a9 = '900px';
 
 const xValue= ['450px','600px','650px','600px','450px','300px','250px','300px'];
-const yValue= ['0px','55px','200px','345px','410px','345px','200px','55px'];
+const yValue= ['0px','55px','200px','345px','400px','345px','200px','55px'];
 // offset이 4분면이 아니라 왼쪽 상단부터 시작하기 때문에 좌표를 다르게 접근했어야 했다.
 // 수를 하나의 변수로 계산한 뒤 x 좌표값의 최소 vw let =(a);
 // 														y 좌표값의 최소 vw let =(b);
@@ -81,6 +82,15 @@ for(let index=0; index<colorArray.length; index++){
 // 	target.children[index2].style.left=`${xValue[index2]}vw`;
 // 	target.children[index2].style.top=`${yValue[index2]}vw`;
 // }
+
+
+
+root.addEventListener("wheel",function(){
+	console.log("hi");
+
+})
+
+
 
 
 // code review
