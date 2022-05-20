@@ -87,9 +87,9 @@ const yValue= ['0px','55px','200px','345px','400px','345px','200px','55px'];
 // 똑같으면 a=b 해도 상관없을듯!
 
 
-// const imgArr = ['./img/fireworks.svg','./img/bonfire.svg','./img/egg.svg',
-// './img/fish.svg','./img/won.svg','img/street_lamp.svg','img/cat2.svg',
-// 'img/tang.svg'];
+const imgArr = ['./img/fireworks.svg','./img/bonfire.svg','./img/egg.svg',
+'./img/fish.svg','./img/won.svg','img/street_lamp.svg','img/cat2.svg',
+'img/tang.svg'];
 // console.log(imgArr[0]);
 // fireworks 찍힘
 // console.log(typeof imgArr[0]);
