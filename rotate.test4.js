@@ -127,19 +127,33 @@ for(let index=0; index<colorArray.length; index++){
 	
 	
 	Array.from(target.children);
-	console.log(target.children);
+	// console.log(target.children);
+	const targetChildren =document.getElementById("target").children;
+	// console.log(targetChildren);
+	Array.from(targetChildren);
+	console.log(Array.from(targetChildren));
+	console.log(targetChildren);
+	console.dir(targetChildren);
+	
 
-	root.addEventListener("wheel",function(){
-		console.log("hi");
-		let temp;
-		temp = target.children[target.children.length-1];
-		target.children.shift();
-		console.log(target.children);
-		target.children.push(temp);
-		console.log(target.children);
+	// root.addEventListener("wheel",function(){
+	// 	let left = targetChildren.shift();
+	// 	console.log(left);
+	// })
+
+	const ABC =document.getElementById("A");
+	console.log(ABC);
+	const imgList = Array.from(targetChildren);
+	
+
+	ABC.addEventListener("click", function(){
+		imgList.pop();
+		console.log(imgList);
+		// 여기까지 성공을 했고,
+		// li가 줄어드는 콘솔까지는 찍는 걸 확인했다.
+		// 
 
 	})
-	
 	
 	
 	// code review
@@ -156,5 +170,6 @@ for(let index=0; index<colorArray.length; index++){
 // 5. 어차피 gif를 넣을거니까
 
 // 6. 오늘 예제인 슬라이드를 이용하면 활용할 수 있다.
-
+// 문제는 텍스트 슬라이드 같은 경우는
+// 
 
