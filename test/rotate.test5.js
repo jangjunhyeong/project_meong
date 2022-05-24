@@ -78,8 +78,8 @@ const a10 = 100*3;
 // const a8 = '800px';
 // const a9 = '900px';
 
-const xValue= ['450px','600px','650px','600px','450px','300px','250px','300px'];
-const yValue= ['0px','55px','200px','345px','400px','345px','200px','55px'];
+// const xValue= ['450px','600px','650px','600px','450px','300px','250px','300px'];
+// const yValue= ['0px','55px','200px','345px','400px','345px','200px','55px'];
 // offset이 4분면이 아니라 왼쪽 상단부터 시작하기 때문에 좌표를 다르게 접근했어야 했다.
 // 수를 하나의 변수로 계산한 뒤 x 좌표값의 최소 vw let =(a);
 // 														y 좌표값의 최소 vw let =(b);
@@ -87,9 +87,9 @@ const yValue= ['0px','55px','200px','345px','400px','345px','200px','55px'];
 // 똑같으면 a=b 해도 상관없을듯!
 
 
-const imgArr = ['./img/fireworks.svg','./img/bonfire.svg','./img/egg.svg',
-'./img/fish.svg','./img/won.svg','img/street_lamp.svg','img/cat2.svg',
-'img/tang.svg'];
+// const imgArr = ['./img/fireworks.svg','./img/bonfire.svg','./img/egg.svg',
+// './img/fish.svg','./img/won.svg','img/street_lamp.svg','img/cat2.svg',
+// 'img/tang.svg'];
 // console.log(imgArr[0]);
 // fireworks 찍힘
 // console.log(typeof imgArr[0]);
@@ -151,17 +151,17 @@ for(let index=0; index<colorArray.length; index++){
 		
 	// })
 	// 버튼 없애고 휠로 넘어가는 과정
-	// root.addEventListener("wheel",function(){
-	// 	const a = imgList.pop();
-	// 	imgList.unshift(a);
-	// 	// targetChildren.pop();
-	// 	//안됨
-	// 	console.log(targetChildren);
-	// 	// 얘는 안 줄고
-	// 	console.log(imgList);
-	// 	console.log(unshift(a));
-	// 	// 얘는 줄고
-	// })
+	root.addEventListener("wheel",function(){
+		const a = imgList.pop();
+		imgList.unshift(a);
+		// targetChildren.pop();
+		//안됨
+		// console.log(targetChildren);
+		// 얘는 안 줄고
+		console.log(imgList);
+		console.log(unshift(a));
+		// 얘는 줄고
+	})
 	// 이렇게 되면 li 태그의 위치도 다 바뀔 것 같은데.
 	// img를 배열로 바꿔보든지 해보고,
 	// 휠 슬라이드가 안되면 일단 다른 방식으로라도 만들어보자!
