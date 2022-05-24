@@ -151,16 +151,23 @@ for(let index=0; index<colorArray.length; index++){
 		
 	// })
 	// 버튼 없애고 휠로 넘어가는 과정
-	root.addEventListener("wheel",function(){
-		imgList.pop();
-		// targetChildren.pop();
-		//안됨
-		console.log(targetChildren);
-		// 얘는 안 줄고
-		console.log(imgList);
-		// 얘는 줄고
-	})
-	
+	// root.addEventListener("wheel",function(){
+	// 	const a = imgList.pop();
+	// 	imgList.unshift(a);
+	// 	// targetChildren.pop();
+	// 	//안됨
+	// 	console.log(targetChildren);
+	// 	// 얘는 안 줄고
+	// 	console.log(imgList);
+	// 	console.log(unshift(a));
+	// 	// 얘는 줄고
+	// })
+	// 이렇게 되면 li 태그의 위치도 다 바뀔 것 같은데.
+	// img를 배열로 바꿔보든지 해보고,
+	// 휠 슬라이드가 안되면 일단 다른 방식으로라도 만들어보자!
+
+
+
 	// code review
 	// 1. x,y 축의 4분면 그래프가 아닌 offset 개념으로 생각했어야 했다.
 	//  - 접근은 좋았음

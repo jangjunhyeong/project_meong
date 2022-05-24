@@ -22,7 +22,7 @@ header.style.top='30px';
 const img1 = './img/fireworks.svg';
 // main 선언, 크기, 위치 조절
 const main = document.querySelector("main");
-main.style.width='1000px';
+main.style.width='700px';
 main.style.height='500px';
 main.style.backgroundColor='lightgray';
 main.style.position='fixed';
@@ -52,7 +52,7 @@ root.style.display='flex';
 root.style.justifyContent='center';
 root.style.alignItems='center';
 target.style.width='1000px';
-target.style.height='600px';
+target.style.height='6g00px';
 // target.style.backgroundColor='blue'
 target.style.position='fixed';
 target.style.top='85vh';
